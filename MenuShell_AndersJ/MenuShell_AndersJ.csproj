@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{7D89C542-E6FB-4953-96AE-3FBF5D8A6D0A}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>MenuShell</RootNamespace>
-    <AssemblyName>MenuShell</AssemblyName>
+    <RootNamespace>MenuShell_AndersJ</RootNamespace>
+    <AssemblyName>MenuShell_AndersJ</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
