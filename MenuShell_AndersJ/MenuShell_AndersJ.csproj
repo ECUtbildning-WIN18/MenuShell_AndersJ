@@ -51,6 +51,8 @@
     <Compile Include="Services\DeleteUser.cs" />
     <Compile Include="Services\IAuthenticationService.cs" />
     <Compile Include="Services\ListUser.cs" />
+    <Compile Include="Services\UserFinder.cs" />
+    <Compile Include="View\AdminSearchUserView.cs" />
     <Compile Include="View\ManageUserView.cs" />
     <Compile Include="View\AdminDeleteUserView.cs" />
     <Compile Include="View\AdminAddUserView.cs" />

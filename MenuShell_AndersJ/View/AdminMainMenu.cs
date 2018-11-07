@@ -1,25 +1,59 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Threading;
+using MenuShell_AndersJ.Entities;
 
 namespace MenuShell_AndersJ.View
 {
-    class AdminMainMenu : ConsoleView
+    class AdminMainMenu
     {
-        public override string Display()
+        public void Display(List<User> users)
         {
-            base.Display();
+            var manageUser = new ManageUserView();
+            int result = 0;
 
-            Console.ForegroundColor = ConsoleColor.DarkGreen;
-            Console.WriteLine("Sysadmin menu\n");
-            Console.WriteLine("1. Manage users");
-            Console.ResetColor();
-            Console.ForegroundColor = ConsoleColor.DarkRed;
-            Console.WriteLine("2. Log out");
-            Console.WriteLine("3. Exit");
-            Console.ResetColor();
-            Console.ForegroundColor = ConsoleColor.DarkGreen;
-            string result = Console.ReadLine();
-            Console.ResetColor();
-            return result; 
+            while (true)
+            {
+                Console.Clear();
+                
+                Console.ForegroundColor = ConsoleColor.DarkGreen;
+                Console.WriteLine(" ADMIN MENU \n");
+                Console.WriteLine("(1) Manage users");
+                Console.ResetColor();
+                
+                Console.ForegroundColor = ConsoleColor.DarkRed;
+                Console.WriteLine("(2) Exit");
+                Console.ResetColor();
+              
+
+                try
+                {
+                    result = int.Parse(Console.ReadLine());
+                }
+                catch
+                {
+                    result = 0;
+                }
+
+                switch (result)
+                {
+                    case 1:
+                        manageUser.Display(users);
+                        break;
+
+                    case 2:
+                        Environment.Exit(0);
+                        break;
+
+                    default:
+                        Console.ForegroundColor = ConsoleColor.DarkRed;
+                        Console.WriteLine("Wrong input");
+                        Console.ResetColor();
+                        Thread.Sleep(1000);
+                        break;
+                }
+
+            }
         }
     }
 }
